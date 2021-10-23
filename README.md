@@ -2,7 +2,7 @@
 
 Create a tool for delivering high fidelity audio technology at scale of realistic experiences in virtual world based on spectral effects and determined location of the sound. It could an asset for Live coding performance audio rendering with multi-track recording.
 
-![Audio tools](https://github.com/sintijab/ambisonics-decoder/blob/master/preview.png?raw=true)
+![Audio tools](https://github.com/sintijab/ambisonics-decoder/blob/feat-setup/preview.png?raw=true)
 
 
 ### Tools
