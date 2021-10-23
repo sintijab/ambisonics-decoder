@@ -1,0 +1,31 @@
+{
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "es2015",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "alwaysStrict": true,
+    "baseUrl": ".",
+    "outDir": "./build",
+    "types": [
+      "node",
+      "react",
+      "react-router",
+      "react-router-redux",
+      "webpack-env"
+    ]
+  },
+  "suppressImplicitAnyIndexErrors": true,
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "build"]
+}
