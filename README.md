@@ -7,8 +7,7 @@ Create a tool for delivering high fidelity audio technology at scale of realisti
 
 ### Tools
 
-[Resonance Audio SDK](https://resonance-audio.github.io/resonance-audio) for Spatial Audio Rendering
-
+- [Resonance Audio SDK](https://resonance-audio.github.io/resonance-audio) for Spatial Audio Rendering
 
 - Render the scene according to the [CodeMirror](https://codemirror.net/) integrated controls.
 
