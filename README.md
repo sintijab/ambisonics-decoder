@@ -6,7 +6,7 @@ Web software tool for delivering high fidelity audio technology at scale of real
 
 ### Introduction:
 
-Inspired by DRESSX vision: “We strongly believe that the amount of clothing produced today is way greater than humanity needs.” https://dressx.com/. As a dancer and web software engineer I have learned that live performing is crucial for the acknowledgment of the skills and process which brings us to new discoveries. Moreover it is only possible with bidirectional relationship model between transmitter and receiver, imaginary and real world towards real experiences. With the current global challenges we should find a ways to produce less, to produce more sustainably, and not to produce at all.
+Inspired by [DRESSX](https://dressx.com/) vision: “We strongly believe that the amount of clothing produced today is way greater than humanity needs.”. As a dancer and web software engineer I have learned that live performing is crucial for the acknowledgment of the skills and process which brings us to new discoveries. Moreover it is only possible with bidirectional relationship model between transmitter and receiver, imaginary and real world towards real experiences. With the current global challenges we should find a ways to produce less, to produce more sustainably, and not to produce at all.
 
 ![Dress](https://github.com/sintijab/ambisonics-decoder/blob/feat-setup/1227_1_1080x.png?raw=true)
 *Image source: https://dressx.com/products/multicolored-dress-kaikai*
