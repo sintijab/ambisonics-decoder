@@ -1,11 +1,12 @@
-# Ambisonics decoder lab
+# Ambisonics Decoder Lab
 
 Create a tool for delivering high fidelity audio technology at scale of realistic experiences in virtual world based on spectral effects and determined location of the sound. It could an asset for Live coding performance audio rendering with multi-track recording.
 
 ![Audio tools](https://github.com/sintijab/ambisonics-decoder/blob/feat-setup/preview.png?raw=true)
+*Image source: https://resonance-audio.github.io/resonance-audio/discover/overview.html*
 
 
-### Tools
+### Tools:
 
 - [Resonance Audio SDK](https://resonance-audio.github.io/resonance-audio) for Spatial Audio Rendering
 
@@ -23,7 +24,7 @@ Create a tool for delivering high fidelity audio technology at scale of realisti
 
 - Ambisonic soundfields must represent full 360° spatial audio by encoding sound sources on a virtual structures near the user’s position in a scene around a listener.
 
-### Installing
+### Installing:
 
 Installing dependencies
 ```
