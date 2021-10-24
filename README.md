@@ -8,11 +8,23 @@ Web software tool for delivering high fidelity audio technology at scale of real
 
 Inspired by [DRESSX](https://dressx.com/) vision: “We strongly believe that the amount of clothing produced today is way greater than humanity needs.”. As a dancer and web software engineer I have learned that live performing is crucial for the acknowledgment of the skills and process which brings us to new discoveries. Moreover it is only possible with bidirectional relationship model between transmitter and receiver, imaginary and real world towards real experiences. "With the current global challenges we should find a ways to produce less, to produce more sustainably, and not to produce at all."
 
-![Dress](https://github.com/sintijab/ambisonics-decoder/blob/feat-setup/1227_1_1080x.png?raw=true)
+![Dress](https://cdn.shopify.com/s/files/1/0412/1912/9497/products/1227_1_1080x.png?v=1628167808)
 *Image source: https://dressx.com/products/multicolored-dress-kaikai*
 
 ### Solution:
 Training models with live data from dance performers and sending back signals from complex sound environments modelled to extend performers spatial perception with artificial sources for live performance.
+
+### Prototype:
+- Define room dimensions
+- Define materials for each of the room’s surfaces
+- Control the location and number of sound sources
+- Control the listeners position in relation to the room dimensions
+
+![Audio tools](https://github.com/sintijab/ambisonics-decoder/blob/feat-setup/studio_room.jpg?raw=true)
+
+- Control room materials which has different acoustic reflectivity.
+
+![Audio tools](https://github.com/sintijab/ambisonics-decoder/blob/feat-setup/absorption.jpg?raw=true)
 
 ![Audio tools](https://github.com/sintijab/ambisonics-decoder/blob/feat-setup/preview.png?raw=true)
 *Image source: https://resonance-audio.github.io/resonance-audio/discover/overview.html*
