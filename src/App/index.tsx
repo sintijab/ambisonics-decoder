@@ -11,8 +11,8 @@ const App = () => {
   return (
     <>
       <Route path="/" exact children={<Main />} />
-      <Route path="/projects/tablao" exact children={<Player />} />
-      <Route path="/projects/echo" exact children={<VideoController />} />
+      <Route path="/projects/tablao" children={<Player />} />
+      <Route path="/projects/echo" children={<VideoController />} />
     </>
   );
 }
