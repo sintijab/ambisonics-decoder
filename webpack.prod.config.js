@@ -34,6 +34,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(glsl|vs|fs)$/,
+        loader: 'ts-shader-loader'
+      },
+      {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
@@ -109,6 +113,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.mp4$/,
+        use: 'file-loader?name=videos/[name].[ext]',
+      }
     ],
   },
   resolve: {
