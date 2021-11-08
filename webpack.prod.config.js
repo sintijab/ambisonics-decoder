@@ -123,7 +123,7 @@ module.exports = {
     alias: {
       react: path.resolve(__dirname, './node_modules/react'),
     },
-    modules: ['node_modules', './src/common'],
+    modules: ['node_modules'],
     extensions: ['.json', '.js', '.jsx', '.ts', '.tsx', '.scss'],
     fallback: {
       path: require.resolve('path-browserify'),

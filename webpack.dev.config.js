@@ -32,7 +32,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         include: [/src/, /assets/],
-        exclude: /node_modules\/(?!(frontend-common|file-uploader)\/).*/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
