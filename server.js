@@ -1,7 +1,7 @@
 /* eslint-disable */
 var express = require('express');
 var app = express();
-var ws = require('express-ws')(app);
+// var ws = require('express-ws')(app);
 const path = require('path')
 const serverPort = process.env.PORT || 8080
 const serverHost = '0.0.0.0'
@@ -12,12 +12,12 @@ app.get('/', ((req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
 }))
 
-app.ws('/', (ws, req) => {
-  ws.on('message', (msg) => {
-    console.log(msg);
-  });
-  console.log('socket', req.testing);
-});
+// app.ws('/connect', (ws, req) => {
+//   ws.on('message', (msg) => {
+//     console.log(msg);
+//   });
+//   console.log('socket', req.testing);
+// });
 
 
 app.listen(serverPort, serverHost, () => {

@@ -1,0 +1,174 @@
+$thumb-height: 20px;
+$thumb-width: 10px;
+$thumb-background: #e6e6e6;
+$thumb-border: 1px solid #eceff1;
+$thumb-border-radius: 3px;
+$track-color: #eceff1;
+$track-height: 6px;
+
+body {
+    background: #EEEEEE;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  video {
+    width: 100%;
+  }
+  
+  .video-wrapper {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .video-wrapper:hover .controls {
+    transform: translateY(0%);
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 30px;
+    padding: 14px;
+    width: 100%;
+    max-width: 500px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transform: translateY(150%);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .actions button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .actions button i {
+    background-color: none;
+    color: white;
+    font-size: 30px;
+  }
+
+  [type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 12px 0;
+    width: 90%;
+  }
+  [type=range]::-moz-focus-outer {
+    border: 0;
+  }
+  [type=range]:focus {
+    outline: 0;
+  }
+  [type=range]:focus::-webkit-slider-runnable-track {
+    background: #fcfbfc;
+  }
+  [type=range]:focus::-ms-fill-lower {
+    background: #eceff1;
+  }
+  [type=range]:focus::-ms-fill-upper {
+    background: #fbfbfc;
+  }
+  [type=range]::-webkit-slider-runnable-track {
+    cursor: pointer;
+    height: $track-height;
+    transition: all 0.2s ease;
+    width: 90%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    background: #eceff1;
+    border: $thumb-border;
+    border-radius: 5px;
+  }
+  [type=range]::-webkit-slider-thumb {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+    background: $thumb-background;
+    border: $thumb-border;
+    border-radius: $thumb-border-radius;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: $thumb-height;
+    width: $thumb-width;
+    -webkit-appearance: none;
+    margin-top: -8px;
+  }
+  [type=range]::-moz-range-track {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    cursor: pointer;
+    height: $track-height;
+    transition: all 0.2s ease;
+    width: 90%;
+    background: #eceff1;
+    border: 2px solid #cfd8dc;
+    border-radius: 5px;
+    height: 4px;
+  }
+  [type=range]::-moz-range-thumb {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+    background: $thumb-background;
+    border: $thumb-border;
+    border-radius: $thumb-border-radius;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: $thumb-height;
+    width: $thumb-width;
+  }
+  [type=range]::-ms-track {
+    cursor: pointer;
+    height: $track-height;
+    transition: all 0.2s ease;
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    border-width: 12px 0;
+    color: transparent;
+  }
+  [type=range]::-ms-fill-lower {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    background: #dde3e6;
+    border: 2px solid #cfd8dc;
+    border-radius: 10px;
+  }
+  [type=range]::-ms-fill-upper {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    background: #eceff1;
+    border: 2px solid #cfd8dc;
+    border-radius: 10px;
+  }
+  [type=range]::-ms-thumb {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+    background: $thumb-background;
+    border: $thumb-border;
+    border-radius: $thumb-border-radius;
+    box-sizing: border-box;
+    cursor: default;
+    height: $thumb-height;
+    width: $thumb-width;
+    margin-top: 4px;
+  }
+  [type=range]:disabled::-webkit-slider-thumb, [type=range]:disabled::-moz-range-thumb, [type=range]:disabled::-ms-thumb, [type=range]:disabled::-webkit-slider-runnable-track, [type=range]:disabled::-ms-fill-lower, [type=range]:disabled::-ms-fill-upper {
+    cursor: not-allowed;
+  }

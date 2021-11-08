@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "name": "Tablao",
+      "description": "Tablao is a platform, stage dedicated to the dance and musical performances. Tablao venues were developed during the 1960s throughout Spain replacing the cafés cantantes (cabarets).",
+      "technology": "Graphics rendered with custom shaders, small program written in WebGL and texture mapping with three.js. Resonance Audio SDK, simulates room effects for a particular space by introducing dynamic early reflections and late reverberation.",
+      "title": "Que No Querías En Tu Vida Pobre Del Hombre Que Jura (fandangos de Jarrito).",
+      "preview": "webgl",
+      "url": "/projects/tablao"
+    },
+    {
+      "name": "Echo",
+      "description": "Video player with customizable audio channels and spatial audio rendering.",
+      "technology": "Resonance Audio SDK, simulates room effects for a particular space by introducing dynamic early reflections and late reverberation.",
+      "title": "Uno Dos y Tres de Gabriela Ortega, poema de Federico García Lorca.",
+      "preview": "echo",
+      "url": "/projects/echo"
+    }
+  ]
+}
