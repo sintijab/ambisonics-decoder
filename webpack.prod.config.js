@@ -9,9 +9,7 @@ const webpack = require('webpack')
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
-  entry: {
-    main: './src/index.tsx',
-  },
+  entry: ['whatwg-fetch','./src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',

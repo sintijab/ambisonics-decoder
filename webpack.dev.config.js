@@ -17,7 +17,7 @@ module.exports = {
     contentBase: 'webpack/public/',
   },
   watch: true,
-  entry: './src/index.tsx',
+  entry: ['whatwg-fetch','./src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',

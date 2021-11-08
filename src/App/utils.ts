@@ -26,3 +26,18 @@ export const useEventListener = (eventName, handler, element = window) => {
       [eventName, element]
     );
   }
+
+  export const fetchData: (url: string) => Promise<string> = async (url) => {
+    try {
+      const res: any = await fetch(url);
+      if (!res.ok) {
+        const message = `An error has occured: ${res.status}`;
+        throw new Error(message);
+      }
+        const blob = await res.blob();
+        const data = URL.createObjectURL(blob);
+        return data;
+    } catch (e) {
+      throw new Error('Service err');
+    }
+  }

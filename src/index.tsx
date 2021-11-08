@@ -6,8 +6,8 @@ import App from './App';
 import './Assets/normalize.scss';
 
 render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
   document.getElementById("root")
 );

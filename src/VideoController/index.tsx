@@ -1,10 +1,8 @@
 import '@babel/polyfill';
-import React, { useRef } from "react";
-import unodostresvideo from './unodos.mp4';
+import React, { useRef, useEffect } from "react";
 import useVideoPlayer from "./videoHooks";
 import styles from './styles.scss';
-import unodostres from './unodostres.mp3';
-import { useEventListener } from '../App/utils';
+import { fetchData, useEventListener } from '../App/utils';
 
 const VideoController: React.FC = () => {
   const videoElement = useRef(null);
@@ -19,13 +17,23 @@ const VideoController: React.FC = () => {
     } = useVideoPlayer(videoElement, audioElement);
   
     useEventListener("keydown", handleKeys);
+
+    const setMediaSrc = async () => {
+      const audioSrc = await fetchData('/media/unodostres.mp3');
+      const videoSrc = await fetchData('/media/unodos.mp4');
+      audioElement.current.src = audioSrc;
+      videoElement.current.src = videoSrc;
+    }
+
+    useEffect(() => {
+      setMediaSrc();
+    }, [])
   
   return (
     <div className={styles.container}>
-      <audio src={unodostres} ref={audioElement} />
+      <audio ref={audioElement} />
       <div className={styles['video-wrapper']}>
         <video
-          src={unodostresvideo}
           ref={videoElement}
           onTimeUpdate={handleOnTimeUpdate}
           muted

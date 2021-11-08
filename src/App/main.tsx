@@ -7,7 +7,6 @@ import data from './projects.json';
 import webglPreview from './webgl.jpg';
 import echoPreview from './echo.jpg';
 
-
 const Main: React.FC = () => {
   const title = 'Projects:';
   const images = {
