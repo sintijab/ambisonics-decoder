@@ -31,10 +31,11 @@ const VideoController: React.FC = () => {
     useEffect(() => {
       setMediaSrc();
     }, [])
+
+    if (!mediaActive)
+    return (<div className={styles.loader}>Loading...</div>)
   
   return (
-    <>
-    {!mediaActive && <div className={styles.loader}>Loading...</div>}
     <div className={styles.container}>
       <audio ref={audioElement} />
       <div className={styles['video-wrapper']}>
@@ -59,7 +60,6 @@ const VideoController: React.FC = () => {
         </div>
       </div>
     </div>
-    </>
   )
 }
 export default VideoController;
