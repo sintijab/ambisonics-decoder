@@ -29,10 +29,8 @@ const VideoController: React.FC = () => {
     }
 
     useEffect(() => {
-      if (audioElement.current && videoElement.current && !mediaActive) {
-        setMediaSrc();
-      }
-    }, [audioElement.current, videoElement.current])
+      setMediaSrc();
+    }, [])
 
     if (!mediaActive)
     return (<div className={loaderStyles.loader}>Loading...</div>)

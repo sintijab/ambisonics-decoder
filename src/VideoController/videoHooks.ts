@@ -30,10 +30,9 @@ const useVideoPlayer = (videoElement, audioElement) => {
     if (playerState.isPlaying) {
       audioElement.current.play();
       videoElement.current.play();
-    } else if (videoElement.current && audioElement.current) {
-      videoElement.current.pause();
-      audioElement.current.pause();
     }
+      videoElement?.current?.pause();
+      audioElement?.current?.pause();
   }, [playerState.isPlaying]);
 
   const handleOnTimeUpdate = () => {
