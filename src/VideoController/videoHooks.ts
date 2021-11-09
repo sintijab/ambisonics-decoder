@@ -100,7 +100,7 @@ const useVideoPlayer = (videoElement, audioElement) => {
   }
 
   const handleVideoProgress = (event) => {
-    if (playerState.isPlaying) {
+    if (playerState.isPlaying && videoElement.current && audioElement.current) {
       videoElement.current.pause();
       audioElement.current.pause();
     }
