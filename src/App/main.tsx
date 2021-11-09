@@ -1,6 +1,6 @@
 import '@babel/polyfill';
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+
 import Header from '../Header';
 import styles from './styles.scss';
 import data from './projects.json';
@@ -13,13 +13,22 @@ const Main: React.FC = () => {
     'webgl': webglPreview,
     'echo': echoPreview,
   };
+
+  useEffect(() => {
+    const renderer = document.getElementsByClassName('dg ac');
+    if (renderer.length) {
+      window.location.reload();
+    }
+  }, [])
+
   const items = data.projects.map((article, i) => {
     return (
       <div className={styles.article} key={article.name + i}>
-        <Link to={article.url}>{article.name}</Link>
+        <a href={article.url}>{article.name}
         <img src={images[article.preview]} />
         <p>{article.description}</p>
         <p>{article.technology}</p>
+        </a>
       </div>
     )
   });
