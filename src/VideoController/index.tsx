@@ -44,7 +44,7 @@ const VideoController: React.FC = () => {
         />
         <div className={styles.controls}>
           <div className={styles.actions}>
-            <button onClick={() => togglePlay}>
+            <button onClick={togglePlay}>
               <i className={`fa fa-${playerState.isPlaying ? "pause" : "play"}`} style={{ color: "#FFF", fontSize:"28px", cursor: "pointer"}}></i>
             </button>
           </div>
