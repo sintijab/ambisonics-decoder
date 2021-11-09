@@ -40,6 +40,17 @@ function retrieveFile(filename, res) {
 );
 }
 
+let setCache = function (req, res, next) {
+  const period = 86400
+  if (req.method == 'GET') {
+    res.set('Cache-control', `public, max-age=${period}`)
+  } else {
+    res.set('Cache-control', `no-store`)
+  }
+  next()
+}
+app.use(setCache)
+
 app.use(express.static(path.join(__dirname, 'build')))
 
 app.get('/media/:file_name', (req, res) => {

@@ -4,6 +4,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+const { InjectManifest } = require('workbox-webpack-plugin');
 const webpack = require('webpack')
 
 module.exports = {
@@ -139,5 +140,9 @@ module.exports = {
       template: './index.html',
       filename: 'index.html',
     }),
+    new InjectManifest({
+      swSrc: './src/sw.js',
+      swDest: "sw.js"
+    })
   ],
 }

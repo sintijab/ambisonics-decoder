@@ -1,7 +1,6 @@
 import '@babel/polyfill';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { GUI } from 'three/examples/jsm/libs/dat.gui.module.js';
 import hardwood2_diffuse from './hardwood2_diffuse.jpg';
 import hardwood2_bump from './hardwood2_bump.jpg';
@@ -11,7 +10,7 @@ import vertexshader from './vertexshader.glsl';
 
 let scene, camera, renderer;
 let geometry, mesh, material;
-let bulbLight, bulbMat, hemiLight, stats;
+let bulbLight, bulbMat, hemiLight;
 let floorMat;
 let mouse;
 
@@ -46,10 +45,6 @@ const params = {
 };
 
 export const init = (containerElement, videoElement) => {
-
-
-  stats = new Stats();
-  containerElement.current.appendChild( stats.dom );
   camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 100000 );
   camera.position.x = 0;
   camera.position.z = 10;
@@ -242,8 +237,6 @@ export const render = () => {
   bulbLight.position.y = Math.cos( time ) * 0.75 + 1.25;
 
   renderer.render( scene, camera );
-
-  stats.update();
 }
 
 

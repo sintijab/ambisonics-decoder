@@ -1,10 +1,12 @@
 import '@babel/polyfill';
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import useVideoPlayer from "./videoHooks";
 import styles from './styles.scss';
+import loaderStyles from '../utils/loader.scss';
 import { fetchData, useEventListener } from '../App/utils';
 
 const VideoController: React.FC = () => {
+  const [mediaActive, startMedia] = useState(false);
   const videoElement = useRef(null);
   const audioElement = useRef(null);
 
@@ -23,6 +25,7 @@ const VideoController: React.FC = () => {
       const videoSrc = await fetchData('/media/unodos.mp4');
       audioElement.current.src = audioSrc;
       videoElement.current.src = videoSrc;
+      startMedia(true);
     }
 
     useEffect(() => {
@@ -30,6 +33,8 @@ const VideoController: React.FC = () => {
     }, [])
   
   return (
+    <>
+    {!mediaActive && <div className={styles.loader}>Loading...</div>}
     <div className={styles.container}>
       <audio ref={audioElement} />
       <div className={styles['video-wrapper']}>
@@ -54,6 +59,7 @@ const VideoController: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 export default VideoController;

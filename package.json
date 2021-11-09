@@ -109,6 +109,7 @@
     "ts-shader-loader": "^1.0.6",
     "url-loader": "^4.1.0",
     "webpack-node-externals": "^1.7.2",
-    "whatwg-fetch": "^3.6.2"
+    "whatwg-fetch": "^3.6.2",
+    "workbox-webpack-plugin": "^6.3.0"
   }
 }
